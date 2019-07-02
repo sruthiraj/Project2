@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        #chartdiv {
+            width: 100%;
+            height: 600px
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/chart.css') }}">
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+</head>
+
+
+<div class="jumbotron text-center">
+    <h1>Movement of Refugees and Asylum Seekers 1960-2017</h1>
+    <p>Source: UNHCR</p>
+</div>
+
+
+<!-- Resources -->
+
+
+<!-- Chart code -->
+
+<body>
+
+    <div id="chartdiv"></div>
+
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+    <!-- HTML -->
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Team: World Connection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
+</head>
+
+<body>
+    <!-- Page Content -->
+
+    <div class="jumbotron text-center">
+        <h1>Refugee Movement Overtime</h1>
+        <p>Erin, Sruthi, JD, Megan, Sirishk</p>
+    </div>
+
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <!--<h1 class="my-4">Page Heading -->
+        <small>Overview</small>
+        </h1>
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <a href="https://github.com/Barbara-Gordon/Team-Project-2">
+                    <!--Link Html-->
+                    <img class="img-fluid" src="/static/images/unity.jpg" alt="we are the world" style="width:750px;height:500px;">
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="my-3">Project Description</h3>
+                <p>The UN estimates 65.6 million people displaced globally by conflict. Since 1951, the UN has kept statistics on refugee movement. Using a UN-refugee dataset from dataword that will be stored in a SQL database. </p>
+                <h3 class="my-3">Goals</h3>
+                <p>We want to visualize the movement of refugees across specific regions by using an interactive chart. The chart will display human migration. </p>
+                <h3 class="my-3">Project Details</h3>
+                <ul>
+                    <li>Heatmap (of refugees to/from country)</li>
+                    <li>Flight Path Map</li>
+                    <li>Slide date function for years</li>
+                    <li>Line Graph of Total Movement</li>
+                    <li>Relational Chord Chart</li>
+                </ul>
+                <h3 class="my-3">Tools</h3>
+                <ul>
+                    <li>Chartjs</li>
+                    <li>Amcharts</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Line Graph: <span class="text-muted">Total Count of Displaced Refugees/Over Time by Country</span></h2>
+                <p class="lead">Check out the total count of refugees displaced from 1980 - 2016 by clicking the graph to the right! </p>
+                <ul>
+                    <li>How to Use:</li>
+                    <li>Select a Country</li>
+                    <li>Hover inside graph for clear visibility</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <a href="{{ url_for('chart1') }}">
+                    <!--Link Html-->
+                    <img class="img-fluid" src="/static/images/chart1.png" alt="Line Graph" style="width:500px;height:300px;">
+                    <!--place image of visualization-->
+                </a>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 col-md-push-5">
+                <h2 class="featurette-heading">Chord Chart: <span class="text-muted">Movements between Countries</span></h2>
+                <p class="lead">If you want to see the direct relationships between countries click the chart to the right!</p>
+                <ul>
+                    <li>How to Use:</li>
+                    <li>Select a Year</li>
+                    <li>Select a Country</li>
+                    <li>Click inside the chart to uncover connections</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <a href="{{ url_for('chart2') }}">
+                    <!--Link Html-->
+                    <img class="img-fluid" src="/static/images/chart2.png" alt="Chord Chart" style="width:500px;height:300px;">
+                    <!--place image of visualization  use alt for title description-->
+                </a>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Movement Map: <span class="text-muted">Where refugess have gone over time</span></h2>
+                <p class="lead">Click the map to see where refugees have gone from 1960-2017. The best part is the rest of the work has been automated for you!!</p>
+            </div>
+            <div class="col-md-5">
+                <a href="{{ url_for('map_page') }}">
+                    <!--Link Html-->
+                    <img class="img-fluid" src="/static/images/map.png" alt="Flight Map" style="width:500px;height:300px;">
+                    <!--place image of visualization-->
+                </a>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+    </div>
+    <!-- /.container -->
+</body>
+
+</html>

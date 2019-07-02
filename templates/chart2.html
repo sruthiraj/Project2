@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chord Chart</title>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/material.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <style>
+        #chartdiv {
+            width: 150%;
+            height: 750px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/chart2.css') }}">
+</head>
+
+<body>
+    <div><a href="/">Home</a>
+        <h1 id="title"></h1>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="well">
+                <h5>SELECT Year and Country of Origin:</h5>
+                <select id="selectYear" onchange="yearOnChange(this.value)"></select>
+                <select id="selectCountry" onchange="countryOnChange(this.value)"></select>
+            </div>
+
+        </div>
+        <div class="col-md-5">
+            <div id="pie"></div>
+        </div>
+        <div id="chartdiv"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="{{ url_for('static', filename='js/chart2.js') }}"></script>
+
+</html>
